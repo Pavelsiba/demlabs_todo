@@ -19,5 +19,3 @@
   <button on:click={() => onEdit(todo)} class={`ml-2 px-2 py-1 rounded ${buttonClass}`}>Edit</button>
   <button on:click={() => onDelete(todo.id)} class={`ml-2 px-2 py-1 rounded ${deleteButtonClass || buttonClass}`}>Delete</button>
 </li>
-
-

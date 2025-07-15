@@ -112,11 +112,11 @@
     <div class="text-center text-gray-500 py-8">Загружаю ...</div>
   {:else}
     <ul>
-      {#each todos.filter((todo) => !search || todo.title
-            .toLowerCase()
-            .includes(search.toLowerCase()) || (todo.description && todo.description
-              .toLowerCase()
-              .includes(search.toLowerCase()))) as todo (todo.id)}
+      {#each todos.filter(todo =>
+        !search ||
+        todo.title.toLowerCase().includes(search.toLowerCase()) ||
+        (todo.description && todo.description.toLowerCase().includes(search.toLowerCase()))
+      ) as todo (todo.id)}
         {#if editing && editing.id === todo.id}
           <li class="flex flex-col gap-2 py-2 px-3 rounded-md bg-sky-50 border border-sky-200 mb-2">
             <div class="flex flex-col gap-2 w-full">
